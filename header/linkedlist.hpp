@@ -10,7 +10,7 @@ class LinkedList {
 		virtual 	~LinkedList();
 		void 		print();
 		void 		insert(T data);
-		LinkedList* 	reverseList();
+		LinkedList& 	reverseList();
 		Node<T>*	getHead() const;
 		void		setHead(Node<T>* node);
 	private:

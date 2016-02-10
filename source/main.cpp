@@ -13,9 +13,8 @@ int main() {
 	ll.insert(60.6);
 	ll.print();
 
-	LinkedList<float> *rll = ll.reverseList();
-	rll->print();
-	delete rll;
+	LinkedList<float> rll = ll.reverseList();
+	rll.print();
 
 	return 0;
 }
