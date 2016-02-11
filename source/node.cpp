@@ -1,6 +1,9 @@
 #include "node.hpp"
 
 template <typename T>
+		Node<T>::~Node() 		{ delete this->next; }
+
+template <typename T>
 Node<T>*	Node<T>::getNext() 		{ return this->next; }
 
 template <typename T>

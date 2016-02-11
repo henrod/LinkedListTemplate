@@ -4,6 +4,7 @@
 template <typename T>
 class Node {
 	public:
+		~Node();
 		Node*	getNext();
 		void 	setNext(Node *next);
 		T	getData();

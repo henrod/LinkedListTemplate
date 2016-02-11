@@ -34,13 +34,13 @@ void LinkedList<T>::setHead(Node<T> *node) {
 }
 
 template <typename T>
-LinkedList<T>& LinkedList<T>::reverseList() {
-	LinkedList<T>* rll = new LinkedList<T>();
+LinkedList<T> LinkedList<T>::reverseList() {
+	LinkedList<T> rll;
 	for (Node<T>* curr = head; curr != NULL; curr = curr->getNext()) {
 		Node<T>* new_node = new Node<T>();
 		new_node->setData(curr->getData());
-		new_node->setNext(rll->getHead());
-		rll->setHead(new_node);
+		new_node->setNext(rll.getHead());
+		rll.setHead(new_node);
 	}
-	return *rll;
+	return rll;
 }
