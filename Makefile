@@ -2,7 +2,8 @@ CC 	  = g++
 FLAGS	  = -std=c++11
 STRIP 	  = strip
 VALGRIND  = valgrind --leak-check=full --show-leak-kinds=all 
-CPP_FILES = $(wildcard source/*.cpp)
+#CPP_FILES = $(wildcard source/*.cpp)
+CPP_FILES = source/main.cpp
 HPP_FILES = header
 OBJ_FILES = obj/main.o
 
