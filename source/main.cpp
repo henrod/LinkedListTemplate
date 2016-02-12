@@ -1,7 +1,6 @@
 #include <iostream>
 #include <iomanip>
 #include "linkedlist.hpp"
-#include "linkedlist.cpp"
 
 int main() {
 	LinkedList<float> ll;

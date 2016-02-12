@@ -14,4 +14,6 @@ class Node {
 		Node	*next;
 };
 
+#include "node.cpp"
+
 #endif //NODE_H

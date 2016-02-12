@@ -1,5 +1,4 @@
 #include "linkedlist.hpp"
-#include "node.cpp"
 #include <iostream>
 
 template <typename T>

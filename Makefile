@@ -1,14 +1,13 @@
-CC 	  = g++
-FLAGS	  = -std=c++11
-STRIP 	  = strip
-VALGRIND  = valgrind --leak-check=full --show-leak-kinds=all 
-#CPP_FILES = $(wildcard source/*.cpp)
-CPP_FILES = source/main.cpp
-HPP_FILES = header
+CXX 	  	= g++
+CXXFLAGS  = -std=c++11 -Wall -Wextra
+VALGRIND  = valgrind --leak-check=full --show-leak-kinds=all
+CPP_PATH  = source
+CPP_FILES = $(CPP_PATH)/main.cpp
+HPP_PATH  = header
 OBJ_FILES = obj/main.o
 
 all: $(SOURCE)
-	$(CC) $(FLAGS) -I$(HPP_FILES) $(CPP_FILES) -o$(OBJ_FILES)
+	$(CXX) $(CXXFLAGS) -I$(HPP_PATH) -I$(CPP_PATH)  $(CPP_FILES) -o$(OBJ_FILES)
 
 clean:
 	rm -f $(OBJ_FILES)
