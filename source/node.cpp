@@ -1,16 +1,21 @@
 #include "node.hpp"
 
 template <typename T>
-		Node<T>::~Node() 		{ delete this->next; }
+std::unique_ptr<Node<T>>& Node<T>::getNext() {
+	return this->next;
+}
 
 template <typename T>
-Node<T>*	Node<T>::getNext() 		{ return this->next; }
+void Node<T>::setNext(std::unique_ptr<Node<T>>& next) {
+	this->next = std::move(next);
+}
 
 template <typename T>
-void 		Node<T>::setNext(Node<T> *next) { this->next = next; }
+T& Node<T>::getData() {
+	return this->data;
+}
 
 template <typename T>
-T 		Node<T>::getData() 		{ return this->data; }
-
-template <typename T>
-void 		Node<T>::setData(const T& data) { this->data = data; }
+void Node<T>::setData(const T& data) {
+	this->data = data;
+}

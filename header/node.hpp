@@ -1,17 +1,18 @@
 #ifndef NODE_H
 #define NODE_H
 
+#include <memory>
+
 template <typename T>
 class Node {
 	public:
-		~Node();
-		Node*	getNext();
-		void 	setNext(Node *next);
-		T	getData();
+		std::unique_ptr<Node<T>>&	getNext();
+		void 	setNext(std::unique_ptr<Node<T>>& next);
+		T&		getData();
 		void	setData(const T& data);
 	protected:
 		T	data;
-		Node	*next;
+		std::unique_ptr<Node<T>> next;
 };
 
 #include "node.cpp"

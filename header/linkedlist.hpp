@@ -6,15 +6,13 @@
 template <typename T>
 class LinkedList {
 	public:
-		LinkedList() { head = nullptr; };
-		virtual 	~LinkedList();
-		void 		print();
-		void 		insert(T data);
+		void 				print() const;
+		void 				insert(const T& data);
 		LinkedList 	reverseList();
-		Node<T>*	getHead() const;
-		void		setHead(Node<T>* node);
+		std::unique_ptr<Node<T>>&	getHead();
+		void				setHead(std::unique_ptr<Node<T>>& node);
 	private:
-		Node<T> *head;
+		std::unique_ptr<Node<T>> head;
 };
 
 #include "linkedlist.cpp"
